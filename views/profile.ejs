@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>EJS Template Engine Implementation</title>
+    </head>
+    <body>
+        <%- include('common/header')%>
+        <h2>Welcome to Profile page</h2>
+        <p>Welcome<%= user.name %></p>
+        <p><%= user.email %></p>
+        <p><%= user.country  %></p>
+        <ul>
+            <% user.skills.forEach((items)=>{%>
+            <li><%= items %></li>
+            <% })%>
+        </ul>
+    </body>
+</html>

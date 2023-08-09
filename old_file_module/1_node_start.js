@@ -4,7 +4,7 @@ var pdf = require("pdf-creator-node");
 var fs = require("fs");
 
 // Read HTML Template
-var html = fs.readFileSync("template.html", "utf8");
+var html = fs.readFileSync("./old_file_module/template.html", "utf8");
 
 
 var options = {
@@ -45,7 +45,7 @@ var users = [
     data: {
       users: users,
     },
-    path: "./output.pdf",
+    path: "./old_file_module/outputs.pdf",
     type: "pdf",
   };
   // By default a file is created but you could switch between Buffer and Streams by using "buffer" or "stream" respectively.
