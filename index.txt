@@ -25,3 +25,5 @@ package-lock
 package
 mysql_config
 mysql_crud_api
+calc.js
+app.js

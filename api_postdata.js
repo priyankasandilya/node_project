@@ -6,11 +6,14 @@ const app=express()
 app.use(express.json())
 app.post('/', async(req,res)=>{
     let result = req.body
-    console.log(result)
+    // console.log(result)
     
     let data = await dbConnect();
     data = await data.insertMany(result)
-    res.send(data)
+    // res.send(data)
+    if(data.acknowledged){
+        res.send({status:"Data Inserted"})
+    }
 }
 
 )

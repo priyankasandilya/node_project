@@ -25,9 +25,13 @@ app.get('/contact', (req, res) => {
     res.send("Welcome to contact page")
 })
 
-//-----route level middleware applied on route------------------
-app.get('/about',reqFilter,(req,res)=>{
+app.get('/about',(req,res)=>{
     res.send("Welcome to About Page")
+})
+
+//-----route level middleware applied on route------------------
+app.get('/review',reqFilter,(req,res)=>{
+    res.end(`This is a review page`)
 })
 
 app.get('*', (req, res) => {

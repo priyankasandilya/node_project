@@ -3,7 +3,8 @@ const data = [
     {name:'panku', add:'jammu'},
     {name:'lolu', add:'hydra'}
 ]
-module.exports=data;
+// module.exports = data
+module.exports.hh =data;
 
 //"type":"module", we need to add in package.json-----
 // const data1=[

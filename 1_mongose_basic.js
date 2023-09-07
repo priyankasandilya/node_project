@@ -11,7 +11,7 @@ const mongoose=require('mongoose')
 //save data
 const saveInDB= async()=>{
         const Product = mongoose.model('products',productSchemas)
-    let data = new Product({name:'max 5',price:211,category:'mob',brand:'new brand'})
+    let data = new Product({name:'maxx 55',price:211,category:'mob',brand:'new brand'})
     let result = await data.save()
     console.log(result)
 }
@@ -19,8 +19,8 @@ const saveInDB= async()=>{
 //update data
 const updateInDB = async(req,res)=>{
     const Product = mongoose.model('products',productSchemas)
-    let data = await Product.updateMany(
-        {name:'max 5'},
+    let data = await Product.updateOne(
+        {name:'maxx 55'},
         {$set:{category:'MOB', price:'22'}}
     )
     console.log(data)
@@ -29,7 +29,7 @@ const updateInDB = async(req,res)=>{
 //Delete data
 const deleteInDB = async(req,res)=>{
     const Product = mongoose.model('products',productSchemas)
-    let result = await Product.deleteMany({name:'max 5'})
+    let result = await Product.deleteMany({name:'maxx 55'})
     if(result.acknowledged){
         console.log("Data Deleted")
     }
@@ -37,8 +37,8 @@ const deleteInDB = async(req,res)=>{
 
 //Read data
 const readData = async (req,res)=>{
-    const Product = mongoose.model('Products',productSchemas)
-    let result = await Product.find({name:"note 8"})
+    const Product = mongoose.model('products',productSchemas)
+    let result = await Product.find({name:"m5"})
     console.log(result)
 }
-readData()
+deleteInDB()

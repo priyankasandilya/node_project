@@ -1,26 +1,48 @@
 /*---------------------File module----------------------------------------*/
-// const fs = require("fs")
-// fs.writeFileSync("./contents/t3.txt","Ram aam khata hai...")
-// fs.writeFile("./content/t2.txt","Ram mango khata hai....",(err,res)=>{
+const fs = require("fs")
+// fs.writeFileSync("./content/t3.txt","Ram aam khata hai...hhahhhha")
+// fs.writeFile("./contentss/t2.txt","Ram mango khata hai.... without me hahaha",(err,res)=>{
 //     if(err){
 //         console.log(err)
-        //    return
+//            return
 //     }
 //     console.log(res)
 // })
 
+// fs.readFile('./content/sample.txt','utf8',(err,data)=>{
+//     if(err){
+//         console.log(err)
+//         return
+//     }
+//     console.log(data)
+// })
 /*---------------------http module----------------------------------------*/
-const http = require("http")
-const fs = require("fs")
-
 const data = require('./data')
 // console.log(data)
+// console.log(data.hh[0])
 
 // import data1 from './data.js'
 // console.log(data1)
 
 // import {data2} from './data.js'
 // console.log(data2)
+
+const http = require("http")
+
+// console.log("file execution start")
+// const hh = fs.readFileSync('new.text','utf8')
+// console.log(hh)
+// console.log("File execution end")
+
+// console.log("file execution start")
+// fs.writeFile("new.txt","Ram mango khata hai.... without me hahaha",(err,res)=>{
+//     if(err){
+//         console.log(err)
+//            return
+//     }
+//     console.log("file created")
+// })
+// console.log("File execution end")
 
 // http.createServer((req,res)=>{
 //     res.writeHead(200,{'content-type':'application/json'})
@@ -38,12 +60,13 @@ const data = require('./data')
 
 // http.createServer((req,res)=>{
 //     res.write("This is Priyanka run coding on server.") 
-//     // if(req.url === '/'){
-//     //     res.end("This is main page")
-//     // }
-//     // if(req.url === '/about'){
-//     //     res.end("This is about page")
-//     // }
+//     // console.log(req.url)
+//     if(req.url === '/'){
+//         res.end("\nThis is main page")
+//     }
+//     if(req.url === '/about'){
+//         res.end("\nThis is about page")
+//     }
 //     res.end();
 // }).listen('5000')
 
@@ -66,7 +89,20 @@ const data = require('./data')
 //     console.log("Invalid input")
 // }
 
+// const source = { b: 4, c: 5 };
+// const returnedTarget = Object.assign({ a: 1, b: 2 }, source);
+// console.log(returnedTarget.b,returnedTarget.a)
 
+// const obj1 = { a: 1 };
+// const new_obj = Object.assign({a:4}, obj1);
+// console.log(new_obj.a);
+
+// const object1 = {a: 1,b: 2,c: 3};  
+// const object3= {  g: 1,h: 2,i: 3};       
+//   const object2 = Object.assign(object1,{c: 4, d: 5});  
+//   const object4 = Object.assign({g: 34, h: 25}, object3);  
+//   console.log(object2.c, object2.d);  
+//   console.log(object4.g, object4.h); 
 
 
 

@@ -10,16 +10,16 @@ const dirname = path.join(__dirname,'content');
 
 //create files under directory and write over them--------
 // for(i=0; i<5;i++){
-//     fs.writeFileSync('./content/demo'+(i+1)+'.txt', `This is Demo file ${i+1}`)}
+//     fs.writeFileSync('./content/sample'+(i+1)+'.txt', `This is Sample file ${i+1}`)}
 
 
 // List all the files under directory-------
 fs.readdir(dirname, (err,files)=>{
     // console.log(files)
-    // files.forEach((item)=>{
-    //     console.warn("File name is: "+item)
-    // })
-    // for(i in files){
+    files.forEach((item)=>{
+        // console.warn("File name is: "+item)
+    })
+    // for(let i in files){
     //     console.warn(files[i])
     // }
     // for(i of files){

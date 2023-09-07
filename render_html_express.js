@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 app.get('/',(req,res)=>{
+    // console.log(req.query)
     // console.log(req.query.name)
     res.send(`
     <h3>welcome to Home page</h3>

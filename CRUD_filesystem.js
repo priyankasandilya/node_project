@@ -40,6 +40,7 @@ const filepath = `${dirname}/sample.txt`
     // let c = new Promise((resolve, reject) => {
     //     setTimeout(()=>{
     //         b=10;
-    //         resolve(b)
+    //         // resolve(b)
+    //         // reject(0)
     //     },1000)
-    // }).then((data)=>console.log(a+data))
+    // }).then((data)=>console.log(a+data),(error)=>{console.error("value not correct")})
