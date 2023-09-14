@@ -6,10 +6,10 @@ const reqFilter = require('./middleware_diff_file')
 
 //---- Grouped middleware--------
 const route = express.Router()
-route.use(reqFilter)
-
-app.use('/',route)
+// route.use(reqFilter)
 // app.use(reqFilter)
+app.use('/',route)
+
 const dirname = path.join(__dirname,'public')
 
 //access HTML file method 1 with (.html) extension like
@@ -22,7 +22,7 @@ const dirname = path.join(__dirname,'public')
         res.sendFile(`${dirname}/index.html`)
     })
 
-    app.get('/contact',(req,res)=>{
+    route.get('/contact',(req,res)=>{
         // res.send('this is contact page.')
         res.sendFile(`${dirname}/contact.html`)
     })

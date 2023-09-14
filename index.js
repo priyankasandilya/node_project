@@ -19,7 +19,7 @@ const fs = require("fs")
 /*---------------------http module----------------------------------------*/
 const data = require('./data')
 // console.log(data)
-// console.log(data.hh[0])
+// console.log(data)
 
 // import data1 from './data.js'
 // console.log(data1)
@@ -44,11 +44,15 @@ const http = require("http")
 // })
 // console.log("File execution end")
 
-// http.createServer((req,res)=>{
-//     res.writeHead(200,{'content-type':'application/json'})
-//     res.write(JSON.stringify(data))
-//     res.end()
-// }).listen(5000)
+console.log("Execution start")
+http.createServer((req,res)=>{
+    res.writeHead(200,{'content-type':'application/json'})
+    res.write(JSON.stringify(data.hh))
+    res.end()
+}).listen(5000,()=>{
+    console.log("server listening on port 5000")
+})
+console.log("Execution end")
 
 
 // const datacontrol = (req,res)=>{
