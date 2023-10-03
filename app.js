@@ -26,16 +26,47 @@
 // console.error("Unauthorized user!")
 // console.log(__dirname)
 
-// const url = new URL('https://www.register.com/?name=gfg');
+const url = new URL('https://www.register.com/?name=gfg');
 // console.log(url)
 // console.log(url.searchParams)
 // console.log(url.searchParams.get('name'))
 // console.log(url.searchParams.append('roll',45))  //used to add roll as query string
 // console.log(url.href)
 
-const encoder = new TextEncoder()
-let enc_Data = encoder.encode("hello")
-console.log(enc_Data)
-let decoder = new TextDecoder()
-let dec_data = decoder.decode(enc_Data)
-console.log(dec_data)
+// const encoder = new TextEncoder()
+// let enc_Data = encoder.encode("hello")
+// console.log(enc_Data)
+// let decoder = new TextDecoder()
+// let dec_data = decoder.decode(enc_Data)
+// console.log(dec_data)
+
+// let text = null;
+// console.log(text)
+
+
+//without creating child process----------------------
+const http = require('http');
+const longComputation = () => {
+  let sum = 0;
+  for (let i = 0; i < 1e9; i++) {
+    sum += i;
+  };
+  return sum;
+};
+
+const server = http.createServer();
+
+server.on('request', (req, res) => {
+  if (req.url === '/compute') {
+    res.write("This is the start of child process implementation\n")
+    const sum = longComputation();
+     res.write(`Sum is ${sum}`);
+     res.end("This is the end of child process implementation\n")
+  } else {
+    res.end('Ok')
+  }
+});
+
+server.listen(3000,()=>{
+    console.log("Server is listening on 3000 PORT")
+});

@@ -44,15 +44,15 @@ const http = require("http")
 // })
 // console.log("File execution end")
 
-console.log("Execution start")
-http.createServer((req,res)=>{
-    res.writeHead(200,{'content-type':'application/json'})
-    res.write(JSON.stringify(data.hh))
-    res.end()
-}).listen(5000,()=>{
-    console.log("server listening on port 5000")
-})
-console.log("Execution end")
+// console.log("Execution start")
+// http.createServer((req,res)=>{
+//     res.writeHead(200,{'content-type':'application/json'})
+//     res.write(JSON.stringify(data.hh))
+//     res.end("\nProgram End")
+// }).listen(5000,()=>{
+//     console.log("server listening on port 5000")
+// })
+// console.log("Execution end")
 
 
 // const datacontrol = (req,res)=>{
@@ -109,4 +109,6 @@ console.log("Execution end")
 //   console.log(object4.g, object4.h); 
 
 
-
+const a = 1;
+const b=5
+a+b>=6?console.log("hi"):a+b==6?console.log("hello"):console.log("gm")

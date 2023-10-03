@@ -1,1 +1,0 @@
-This is a demo file for testing input and output file using piping.

@@ -67,7 +67,7 @@ function pipeReadToWrite(readStream,writeStream,finalMessage){
             .on("error",handleError)
             .on("finish", finalMessage)
 }
-pipeReadToWrite(rs,ws,finalMessage)
+// pipeReadToWrite(rs,ws,finalMessage)
 
 //--------------Yargs--------------------------------
 const yargs = require('yargs')
@@ -93,22 +93,25 @@ yargs.command({
             (argv.firstNumber+argv.secondNumber))
     }
 })
-yargs.parse()
+// yargs.parse()
 
 //-----------------zip file suing zlib-----------
-var fs = require("fs");
 var zlib = require('zlib');
 
 // Compress the file input.txt to input.txt.gz
-fs.createReadStream('input.txt')
-   .pipe(zlib.createGzip())
-   .pipe(fs.createWriteStream('input.txt.gz'));
+// fs.createReadStream('input.txt')
+//    .pipe(zlib.createGzip())
+//    .pipe(fs.createWriteStream('input.txt.gz'));
   
 console.log("File Compressed.");
 
 // Decompress the file input.txt.gz to input.txt
-fs.createReadStream('input.txt.gz')
-   .pipe(zlib.createGunzip())
-   .pipe(fs.createWriteStream('input.txt'));
+// fs.createReadStream('input.txt.gz')
+//    .pipe(zlib.createGunzip())
+//    .pipe(fs.createWriteStream('input.txt'));
   
 console.log("File Decompressed.");
+
+buf = new Buffer.alloc(256);  
+len = buf.write("Simply Easy Learning");  
+console.log("Octets written : "+  len); 

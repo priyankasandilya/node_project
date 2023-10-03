@@ -13,7 +13,7 @@ const reqFilter = (req, res, next) => {
     
 }
 //------syntax for application level middleware
-    // app.use(reqFilter)
+    app.use(reqFilter)
 //-------middleware end-------
 
 
@@ -30,9 +30,9 @@ app.get('/about',(req,res)=>{
 })
 
 //-----route level middleware applied on route------------------
-app.get('/review',reqFilter,(req,res)=>{
-    res.end(`This is a review page`)
-})
+// app.get('/review',reqFilter,(req,res)=>{
+//     res.end(`This is a review page`)
+// })
 
 app.get('*', (req, res) => {
     res.send("OOP's this is not a valid page")
